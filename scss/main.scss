@@ -8,20 +8,24 @@ $wave-count: 5;
 @for $i from 1 through $wave-count {
   .ocean .wave:nth-of-type(#{$i}) {
     position: absolute;
-    top: calc(#{$i} * 30px + 300px);
-    left: 50%;
+    top: calc(#{$i} * 100px + 300px);
     animation: wave #{($wave-count - $i) + 3}s ease-in-out 0s infinite alternate forwards;
-    transform: scale(#{(($i * 10) + 100) / 100});
-    transform: translate(-50%, -50%);
+    transform: scale(#{(($i * 10) + 100) / 100}) translate(-50%, -50%);
   }
 }
 @keyframes wave {
-  0% {left: 0px};
-  100% {left: 500px};
+  0% {left: 50%};
+  100% {left: 75%};
 }
-
+body {
+}
 .ocean {
+  overflow: hidden;
   background-image: url('../img/stars.jpg');
+  background-size: cover;
   height: 100vh;
   width: 100vw;
+  .wave {
+    width: 125vw;
+  }
 }
