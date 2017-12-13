@@ -9,7 +9,10 @@ $wave-count: 5;
   .ocean .wave:nth-of-type(#{$i}) {
     position: absolute;
     top: calc(#{$i} * 30px + 300px);
+    left: 50%;
     animation: wave #{($wave-count - $i) + 3}s ease-in-out 0s infinite alternate forwards;
+    transform: scale(#{(($i * 10) + 100) / 100});
+    transform: translate(-50%, -50%);
   }
 }
 @keyframes wave {
