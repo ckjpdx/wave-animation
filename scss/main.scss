@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+$wave-count: 5;
+
+@for $i from 1 through $wave-count {
+  .ocean .wave:nth-of-type(#{$i}) {
+    position: absolute;
+    top: calc(#{$i} * 30px + 300px);
+    animation: wave #{($wave-count - $i) + 3}s ease-in-out 0s infinite alternate forwards;
+  }
+}
+@keyframes wave {
+  0% {left: 0px};
+  100% {left: 500px};
+}
