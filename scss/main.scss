@@ -23,11 +23,11 @@ $isReversed: 0;
       @keyframes wave#{$i} {
         0% {
           left: 40%;
-          transform: scale(#{(($i * 12) + 100) / 100}) translate(-50%, -50%) scaleX(#{$isReversed}) skewX(10deg);
+          transform: scale(#{(($i * 12) + 100) / 100}) translate(-50%, -50%) scaleX(#{$isReversed}) skewX(20deg);
         };
         100% {
           left: 70%;
-          transform: scale(#{(($i * 12) + 100) / 100}) translate(-50%, -50%) scaleX(#{$isReversed}) skewX(-10deg);
+          transform: scale(#{(($i * 12) + 100) / 100}) translate(-50%, -50%) scaleX(#{$isReversed}) skewX(-20deg);
         };
       }
     }
@@ -55,16 +55,16 @@ body {
 @keyframes moon {
   0% {
     bottom: 0%;
-    width: 10px;
+    width: 1%;
   };
   50% {
     z-index: 0;
     bottom: 60%;
-    width: 500px;
+    width: 10%;
   };
   100% {
     z-index: 999;
     bottom: 15%;
-    width: 1000px;
+    width: 50%;
   }
 }
