@@ -21,15 +21,18 @@ $isReversed: 0;
         animation: wave #{($wave-count - $i) + 3}s ease-in-out 0s infinite alternate forwards;
         transform: scale(#{(($i * 12) + 100) / 100}) translate(-50%, -50%) scaleX(#{$isReversed});
       }
-      // &:nth-of-type(even) {
-      //   transform: scaleX(-1);
-      // }
     }
   }
 }
 @keyframes wave {
-  0% {left: 50%};
-  100% {left: 75%};
+  0% {
+    left: 40%;
+    // transform: skewX(10deg);
+  };
+  100% {
+    left: 70%;
+    // transform: skewX(-10deg);
+  };
 }
 body {
   overflow: hidden;
