@@ -18,21 +18,20 @@ $isReversed: 0;
         z-index: #{$i};
         position: absolute;
         top: $i * 8 + 50%;
-        animation: wave #{($wave-count - $i) + 3}s ease-in-out 0s infinite alternate forwards;
-        transform: scale(#{(($i * 12) + 100) / 100}) translate(-50%, -50%) scaleX(#{$isReversed});
+        animation: wave#{$i} #{($wave-count - $i) + 3}s ease-in-out 0s infinite alternate forwards;
+      }
+      @keyframes wave#{$i} {
+        0% {
+          left: 40%;
+          transform: scale(#{(($i * 12) + 100) / 100}) translate(-50%, -50%) scaleX(#{$isReversed}) skewX(10deg);
+        };
+        100% {
+          left: 70%;
+          transform: scale(#{(($i * 12) + 100) / 100}) translate(-50%, -50%) scaleX(#{$isReversed}) skewX(-10deg);
+        };
       }
     }
   }
-}
-@keyframes wave {
-  0% {
-    left: 40%;
-    // transform: skewX(10deg);
-  };
-  100% {
-    left: 70%;
-    // transform: skewX(-10deg);
-  };
 }
 body {
   overflow: hidden;
