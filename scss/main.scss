@@ -5,12 +5,21 @@
 }
 $wave-count: 5;
 $isReversed: 0;
+$skew1: 0;
+$skew2: 0;
 
 @for $i from 1 through $wave-count {
   @if $i % 2 == 0 {
     $isReversed: -1;
   } @else {
     $isReversed: 1;
+  }
+  @if $isReversed == -1 {
+    $skew1: -20deg;
+    $skew2: 20deg;
+  } @else {
+    $skew1: 20deg;
+    $skew2: -20deg;
   }
   .ocean {
     .wave {
@@ -22,12 +31,12 @@ $isReversed: 0;
       }
       @keyframes wave#{$i} {
         0% {
-          left: 40%;
-          transform: scale(#{(($i * 12) + 100) / 100}) translate(-50%, -50%) scaleX(#{$isReversed}) skewX(20deg);
+          left: 45%;
+          transform: scale(#{(($i * 12) + 100) / 100}) translate(-50%, -50%) scaleX(#{$isReversed}) skewX(#{$skew1});
         };
         100% {
-          left: 70%;
-          transform: scale(#{(($i * 12) + 100) / 100}) translate(-50%, -50%) scaleX(#{$isReversed}) skewX(-20deg);
+          left: 75%;
+          transform: scale(#{(($i * 12) + 100) / 100}) translate(-50%, -50%) scaleX(#{$isReversed}) skewX(#{$skew2});
         };
       }
     }
@@ -43,6 +52,7 @@ body {
   width: 100vw;
   .wave {
     width: 125vw;
+    height: 25vh;
   }
 }
 .moon {

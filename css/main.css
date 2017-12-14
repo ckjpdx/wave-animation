@@ -10,10 +10,10 @@
   animation: wave1 7s ease-in-out 0s infinite alternate forwards; }
 @keyframes wave1 {
   0% {
-    left: 40%;
+    left: 45%;
     transform: scale(1.12) translate(-50%, -50%) scaleX(1) skewX(20deg); }
   100% {
-    left: 70%;
+    left: 75%;
     transform: scale(1.12) translate(-50%, -50%) scaleX(1) skewX(-20deg); } }
 .ocean .wave:nth-of-type(2) {
   z-index: 2;
@@ -22,11 +22,11 @@
   animation: wave2 6s ease-in-out 0s infinite alternate forwards; }
 @keyframes wave2 {
   0% {
-    left: 40%;
-    transform: scale(1.24) translate(-50%, -50%) scaleX(-1) skewX(20deg); }
+    left: 45%;
+    transform: scale(1.24) translate(-50%, -50%) scaleX(-1) skewX(-20deg); }
   100% {
-    left: 70%;
-    transform: scale(1.24) translate(-50%, -50%) scaleX(-1) skewX(-20deg); } }
+    left: 75%;
+    transform: scale(1.24) translate(-50%, -50%) scaleX(-1) skewX(20deg); } }
 .ocean .wave:nth-of-type(3) {
   z-index: 3;
   position: absolute;
@@ -34,10 +34,10 @@
   animation: wave3 5s ease-in-out 0s infinite alternate forwards; }
 @keyframes wave3 {
   0% {
-    left: 40%;
+    left: 45%;
     transform: scale(1.36) translate(-50%, -50%) scaleX(1) skewX(20deg); }
   100% {
-    left: 70%;
+    left: 75%;
     transform: scale(1.36) translate(-50%, -50%) scaleX(1) skewX(-20deg); } }
 .ocean .wave:nth-of-type(4) {
   z-index: 4;
@@ -46,11 +46,11 @@
   animation: wave4 4s ease-in-out 0s infinite alternate forwards; }
 @keyframes wave4 {
   0% {
-    left: 40%;
-    transform: scale(1.48) translate(-50%, -50%) scaleX(-1) skewX(20deg); }
+    left: 45%;
+    transform: scale(1.48) translate(-50%, -50%) scaleX(-1) skewX(-20deg); }
   100% {
-    left: 70%;
-    transform: scale(1.48) translate(-50%, -50%) scaleX(-1) skewX(-20deg); } }
+    left: 75%;
+    transform: scale(1.48) translate(-50%, -50%) scaleX(-1) skewX(20deg); } }
 .ocean .wave:nth-of-type(5) {
   z-index: 5;
   position: absolute;
@@ -58,10 +58,10 @@
   animation: wave5 3s ease-in-out 0s infinite alternate forwards; }
 @keyframes wave5 {
   0% {
-    left: 40%;
+    left: 45%;
     transform: scale(1.6) translate(-50%, -50%) scaleX(1) skewX(20deg); }
   100% {
-    left: 70%;
+    left: 75%;
     transform: scale(1.6) translate(-50%, -50%) scaleX(1) skewX(-20deg); } }
 body {
   overflow: hidden; }
@@ -72,7 +72,8 @@ body {
   height: 100vh;
   width: 100vw; }
   .ocean .wave {
-    width: 125vw; }
+    width: 125vw;
+    height: 25vh; }
 
 .moon {
   position: absolute;
