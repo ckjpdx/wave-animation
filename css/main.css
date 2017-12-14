@@ -64,8 +64,13 @@ body {
   0% {
     bottom: 0%;
     width: 10px; }
+  50% {
+    z-index: 0;
+    bottom: 60%;
+    width: 500px; }
   100% {
-    bottom: 50%;
-    width: 500px; } }
+    z-index: 999;
+    bottom: 15%;
+    width: 1000px; } }
 
 /*# sourceMappingURL=main.css.map */

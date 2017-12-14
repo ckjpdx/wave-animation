@@ -55,8 +55,14 @@ body {
     bottom: 0%;
     width: 10px;
   };
-  100% {
-    bottom: 50%;
+  50% {
+    z-index: 0;
+    bottom: 60%;
     width: 500px;
   };
+  100% {
+    z-index: 999;
+    bottom: 15%;
+    width: 1000px;
+  }
 }
