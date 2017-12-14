@@ -52,7 +52,6 @@ body {
   width: 100vw;
   .wave {
     width: 125vw;
-    height: 25vh;
   }
 }
 .moon {
@@ -76,5 +75,10 @@ body {
     z-index: 999;
     bottom: 15%;
     width: 50%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .wave {
+    height: 30vh;
   }
 }

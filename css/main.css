@@ -72,8 +72,7 @@ body {
   height: 100vh;
   width: 100vw; }
   .ocean .wave {
-    width: 125vw;
-    height: 25vh; }
+    width: 125vw; }
 
 .moon {
   position: absolute;
@@ -93,5 +92,8 @@ body {
     z-index: 999;
     bottom: 15%;
     width: 50%; } }
+@media screen and (max-width: 450px) {
+  .wave {
+    height: 30vh; } }
 
 /*# sourceMappingURL=main.css.map */
