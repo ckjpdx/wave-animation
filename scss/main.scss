@@ -4,13 +4,27 @@
   box-sizing: border-box;
 }
 $wave-count: 5;
+$isReversed: 0;
 
 @for $i from 1 through $wave-count {
-  .ocean .wave:nth-of-type(#{$i}) {
-    position: absolute;
-    top: calc(#{$i} * 100px + 300px);
-    animation: wave #{($wave-count - $i) + 3}s ease-in-out 0s infinite alternate forwards;
-    transform: scale(#{(($i * 10) + 100) / 100}) translate(-50%, -50%);
+  @if $i % 2 == 0 {
+    $isReversed: -1;
+  } @else {
+    $isReversed: 1;
+  }
+  .ocean {
+    .wave {
+      &:nth-of-type(#{$i}) {
+        z-index: #{$i};
+        position: absolute;
+        top: $i * 8 + 50%;
+        animation: wave #{($wave-count - $i) + 3}s ease-in-out 0s infinite alternate forwards;
+        transform: scale(#{(($i * 12) + 100) / 100}) translate(-50%, -50%) scaleX(#{$isReversed});
+      }
+      // &:nth-of-type(even) {
+      //   transform: scaleX(-1);
+      // }
+    }
   }
 }
 @keyframes wave {
@@ -18,9 +32,9 @@ $wave-count: 5;
   100% {left: 75%};
 }
 body {
+  overflow: hidden;
 }
 .ocean {
-  overflow: hidden;
   background-image: url('../img/stars.jpg');
   background-size: cover;
   height: 100vh;
@@ -28,4 +42,21 @@ body {
   .wave {
     width: 125vw;
   }
+}
+.moon {
+  position: absolute;
+  left: 50%;
+  animation: moon 10s ease-in-out 0s infinite alternate forwards;
+  transform: translate(-50%);
+}
+
+@keyframes moon {
+  0% {
+    bottom: 0%;
+    width: 10px;
+  };
+  100% {
+    bottom: 50%;
+    width: 500px;
+  };
 }
