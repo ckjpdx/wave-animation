@@ -1,11 +1,11 @@
 # wave-animation
 a simple, non-interactive scene using scss and repeating keyframe animations
 
-## Purpose
-This project was for practicing 
-
 ## Synopsis
 This very simple project was an exercise in CSS keyframe animations. It has no functionality and currently only works for horizontally oriented screens. 
+
+## Purpose
+This project was for practicing SCSS and CSS animations.
 
 ## Tech Used
 SCSS was used for its ability to create rules via looping. 
