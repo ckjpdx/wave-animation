@@ -25,10 +25,5 @@ SCSS was used for its ability to create rules via looping.
   }
 ```
 ## Usage
-Clone from github or view the site deployed: gh-pages 
+Clone from github or view the site deployed: [gh-pages](https://ckjpdx.github.io/wave-animation/)
 
-## Tests
-
-## Contributors
-
-## License
